@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sensual Reads - 官能の書斎</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            fontFamily: {
+              sans: ['Source Sans 3', 'sans-serif'],
+              serif: ['Lora', 'serif'],
+            },
+            colors: {
+              'brand-bg-main': '#121212', // A very deep, near-black
+              'brand-bg-surface': '#1E1E1E', // A slightly lighter surface color for cards
+              'brand-primary': '#E040FB', // A vibrant, neon-esque magenta
+              'brand-accent': '#FFC107', // A warm, enticing gold
+              'brand-text-main': '#E0E0E0', // Main text, slightly off-white
+              'brand-text-subtle': '#A0A0A0', // Subtle text for dates, etc.
+            },
+            boxShadow: {
+              'glow-primary': '0 0 15px rgba(224, 64, 251, 0.4)',
+              'glow-primary-lg': '0 0 25px rgba(224, 64, 251, 0.5)',
+            }
+        },
+        },
+    }
+    </script>
+    <style>
+      @keyframes fade-in {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      @keyframes fade-in-up {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-in-out forwards;
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.3s ease-out forwards;
+      }
+      .stagger-fade-in-up {
+        animation: fade-in-up 0.5s both;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+</head>
+<body class="bg-brand-bg-main font-sans text-brand-text-main">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -15,8 +15,9 @@ const PostCard: React.FC<PostCardProps> = ({ post, style, className }) => {
       style={style}
       className={`bg-brand-bg-surface rounded-xl overflow-hidden shadow-lg hover:shadow-glow-primary transition-all duration-300 cursor-pointer flex flex-col no-underline group ${className || ''}`}
     >
-      <div className="overflow-hidden">
+      <div className="overflow-hidden relative">
         <img className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src={post.imageUrl} alt={post.title} />
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <div className="flex-grow">

@@ -8,8 +8,11 @@ interface PostPageProps {
 
 const RelatedPostCard: React.FC<{ post: Post }> = ({ post }) => (
   <a href={`#/post/${post.id}`} className="group no-underline">
-    <img src={post.imageUrl} alt={post.title} className="w-full h-40 object-cover rounded-lg mb-4 group-hover:opacity-80 transition-opacity" />
-    <h4 className="font-bold font-serif text-lg text-brand-text-main group-hover:text-brand-primary transition-colors">{post.title}</h4>
+    <div className="relative overflow-hidden rounded-lg">
+      <img src={post.imageUrl} alt={post.title} className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300" />
+      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+    </div>
+    <h4 className="font-bold font-serif text-lg text-brand-text-main group-hover:text-brand-primary transition-colors mt-4">{post.title}</h4>
     <p className="text-sm text-brand-text-subtle font-serif">{post.excerpt.substring(0, 70)}...</p>
   </a>
 );
@@ -21,7 +24,7 @@ const PostPage: React.FC<PostPageProps> = ({ post }) => {
     <main className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8 animate-fade-in">
       <div className="mb-8">
         <a href="#/" className="text-brand-primary hover:underline">
-          &larr; すべての記事に戻る
+          &larr; すべての物語に戻る
         </a>
       </div>
       <article>
@@ -46,7 +49,7 @@ const PostPage: React.FC<PostPageProps> = ({ post }) => {
         <img className="w-full h-auto max-h-[500px] object-cover rounded-xl shadow-lg mb-8" src={post.imageUrl} alt={post.title} />
 
         <div 
-          className="prose prose-invert lg:prose-xl max-w-none prose-h3:text-brand-primary prose-h3:font-serif prose-p:font-serif prose-p:text-brand-text-subtle"
+          className="prose prose-invert lg:prose-xl max-w-none prose-h3:text-brand-primary prose-h3:font-serif prose-p:font-sans prose-p:text-brand-text-subtle prose-p:text-lg prose-p:leading-relaxed"
           dangerouslySetInnerHTML={{ __html: post.content }} 
         />
       </article>

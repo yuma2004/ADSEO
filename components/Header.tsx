@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ onGenerateIdeaClick }) => {
           <h1 className="text-3xl md:text-4xl font-bold font-serif text-brand-text-main tracking-tight">
             Sensual Reads
           </h1>
-          <p className="text-brand-text-subtle mt-1">官能の深淵を探る文学</p>
+          <p className="text-brand-text-subtle mt-1">あなたのための、秘密の書斎</p>
         </a>
         <button
           onClick={onGenerateIdeaClick}

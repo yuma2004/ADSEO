@@ -37,13 +37,6 @@ const PostPage: React.FC<PostPageProps> = ({ post }) => {
           <h1 className="text-4xl md:text-5xl font-extrabold font-serif text-brand-text-main tracking-tight leading-tight">
             {post.title}
           </h1>
-          <div className="mt-6 flex items-center justify-center">
-            <img className="w-12 h-12 rounded-full mr-4" src={post.authorAvatar} alt={post.author} />
-            <div className="text-lg">
-              <p className="text-brand-text-main font-semibold">{post.author}</p>
-              <p className="text-brand-text-subtle">{post.date}</p>
-            </div>
-          </div>
         </header>
 
         <img className="w-full h-auto max-h-[500px] object-cover rounded-xl shadow-lg mb-8" src={post.imageUrl} alt={post.title} />

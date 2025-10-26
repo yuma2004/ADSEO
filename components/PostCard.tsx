@@ -21,13 +21,6 @@ const PostCard: React.FC<PostCardProps> = ({ post, style, className }) => {
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <div className="flex-grow">
-            <div className="flex items-center mb-4">
-              <img className="w-10 h-10 rounded-full mr-4" src={post.authorAvatar} alt={post.author} />
-              <div className="text-sm">
-                <p className="text-brand-text-main leading-none">{post.author}</p>
-                <p className="text-brand-text-subtle">{post.date}</p>
-              </div>
-            </div>
             <h3 className="font-bold font-serif text-xl mb-2 text-brand-text-main group-hover:text-brand-primary transition-colors">{post.title}</h3>
             <p className="text-brand-text-subtle text-base font-serif">
               {post.excerpt}

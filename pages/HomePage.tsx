@@ -2,11 +2,7 @@ import React from 'react';
 import PostCard from '../components/PostCard';
 import { MOCK_POSTS } from '../constants';
 
-interface HomePageProps {
-  onGenerateIdeaClick: () => void;
-}
-
-const HomePage: React.FC<HomePageProps> = ({ onGenerateIdeaClick }) => {
+const HomePage: React.FC = () => {
   return (
     <main className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
        <div className="text-center mb-12 animate-fade-in">
@@ -14,12 +10,6 @@ const HomePage: React.FC<HomePageProps> = ({ onGenerateIdeaClick }) => {
         <p className="mt-4 max-w-2xl mx-auto text-xl text-brand-text-subtle">
           言葉の愛撫に身を委ね、未知の快感の扉を開けて。
         </p>
-        <button
-          onClick={onGenerateIdeaClick}
-          className="mt-6 bg-brand-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-fuchsia-700 transition-colors duration-300 shadow-lg shadow-brand-primary/30 hover:shadow-glow-primary md:hidden"
-        >
-          💡 AIでアイデアを得る
-        </button>
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
         {MOCK_POSTS.map((post, index) => (

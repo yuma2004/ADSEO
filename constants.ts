@@ -1,5 +1,9 @@
 import type { Post } from './types';
 
+import imagePhoenix from './img/バイブの女王.jpg';
+import imageLoveDoll from './img/ラブドール.jpg';
+import imageElectro from './img/潮吹き大洪水.jpg';
+
 export const MOCK_POSTS: Post[] = [
   {
     id: 1,
@@ -7,7 +11,7 @@ export const MOCK_POSTS: Post[] = [
     author: 'Yuki Tanaka',
     authorAvatar: 'https://i.pravatar.cc/150?img=1',
     date: '2024年1月15日',
-    imageUrl: '/img/バイブの女王.jpg',
+    imageUrl: imagePhoenix,
     excerpt: '細長い本体に先端のアクセントがあるSVAKOM系の多機能バイブ。振動・吸引・加熱・スラストの四つの機能を一本にまとめた4in1タイプの詳細レビュー。',
     content: `
       <p class="mb-4">写真の製品は、細長い本体に先端のアクセントがあるSVAKOM系の多機能バイブだ。販売店の説明では、振動・吸引・加熱・スラストの四つの機能を一本にまとめた4in1タイプとして案内されることがある。以下では、公式情報で確認できる共通機能（アプリ連携や吸引テクノロジー）と、使い方・手入れの基礎を整理する。個別モデル名が不明のため、特徴は「同社の近い機構をもつ製品群」で一般化して述べる。</p>
@@ -34,7 +38,7 @@ export const MOCK_POSTS: Post[] = [
     author: 'Maya Sato',
     authorAvatar: 'https://i.pravatar.cc/150?img=2',
     date: '2024年1月12日',
-    imageUrl: '/img/ラブドール.jpg',
+    imageUrl: imageLoveDoll,
     excerpt: '腰からヒップを立体で再現したトルソーの実用的なレビュー。素材の特徴から手入れ方法、安全な使い方まで詳しく解説。',
     content: `
       <p class="mb-4">写真の製品は、腰からヒップを立体で再現したトルソーだ。体の一部だけを切り出した形なので、置きやすく、姿勢を自由に変えやすい。重量があるため、押したり寄りかかったりしても動きにくい。以下では、使う前に知っておきたい点、手入れの手順、合う人・合わない人の目安をまとめる。意見と事実は分けて書く。</p>
@@ -63,7 +67,7 @@ export const MOCK_POSTS: Post[] = [
     author: 'Hana Kimura',
     authorAvatar: 'https://i.pravatar.cc/150?img=3',
     date: '2024年1月10日',
-    imageUrl: '/img/潮吹き大洪水.jpg',
+    imageUrl: imageElectro,
     excerpt: '電気で皮膚や粘膜を軽く刺激するモードと振動モードを一本にまとめた2in1タイプ。安全な使い方と手入れ方法を詳しく解説。',
     content: `
       <p class="mb-4">この製品は、電気で皮膚や粘膜を軽く刺激してしびれるような感覚を作るモードと、一般的な振動モードを一本にまとめたタイプだ。ここでは、楽しみ方よりも先に、安全と手入れを整理する。感度や快感の表現は人によって差が出るので断定しない。</p>

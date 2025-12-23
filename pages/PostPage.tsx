@@ -21,14 +21,14 @@ const PostPage: React.FC<PostPageProps> = ({ post }) => {
   const relatedPosts = MOCK_POSTS.filter(p => p.id !== post.id).slice(0, 2);
 
   return (
-    <main className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8 animate-fade-in">
+    <main className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8 animate-fade-in space-y-10">
       <div className="mb-8">
         <a href="#/" className="text-brand-primary hover:underline">
           &larr; すべての物語に戻る
         </a>
       </div>
-      <article>
-        <header className="mb-8 text-center">
+      <article className="bg-brand-bg-surface/70 border border-white/10 rounded-3xl shadow-glow-primary overflow-hidden">
+        <header className="mb-8 text-center px-6 pt-8">
             <div className="mb-4">
                 {post.tags.map(tag => (
                 <span key={tag} className="inline-block bg-brand-bg-surface rounded-full px-3 py-1 text-sm font-semibold text-brand-text-subtle mr-2">#{tag}</span>
@@ -39,18 +39,22 @@ const PostPage: React.FC<PostPageProps> = ({ post }) => {
           </h1>
         </header>
 
-        <img className="w-full h-auto max-h-[500px] object-cover rounded-xl shadow-lg mb-8" src={post.imageUrl} alt={post.title} />
+        <img className="w-full h-auto max-h-[500px] object-cover rounded-2xl shadow-lg mb-8 px-6" src={post.imageUrl} alt={post.title} />
 
         <div 
-          className="prose prose-invert lg:prose-xl max-w-none prose-h3:text-brand-primary prose-h3:font-serif prose-p:font-sans prose-p:text-brand-text-subtle prose-p:text-lg prose-p:leading-relaxed"
+          className="prose prose-invert lg:prose-xl max-w-none prose-h3:text-brand-primary prose-h3:font-serif prose-p:font-sans prose-p:text-brand-text-subtle prose-p:text-lg prose-p:leading-relaxed px-6 pb-10"
           dangerouslySetInnerHTML={{ __html: post.content }} 
         />
       </article>
 
-      <aside className="mt-16 pt-8 border-t border-white/10">
+      <aside className="mt-6 pt-8 border-t border-white/10">
         <h3 className="text-2xl font-bold font-serif text-center mb-8 text-brand-text-main">あなたへのおすすめ</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {relatedPosts.map(p => <RelatedPostCard key={p.id} post={p} />)}
+          {relatedPosts.map(p => (
+            <div key={p.id} className="bg-brand-bg-surface/70 border border-white/10 rounded-2xl p-4 shadow-glow-primary">
+              <RelatedPostCard post={p} />
+            </div>
+          ))}
         </div>
       </aside>
     </main>

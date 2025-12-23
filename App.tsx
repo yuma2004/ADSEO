@@ -30,10 +30,13 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-brand-bg-main min-h-screen text-brand-text-main font-sans">
-      <Header />
-      {renderPage()}
-      <Footer />
+    <div className="bg-brand-bg-main min-h-screen text-brand-text-main font-sans relative">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(224,64,251,0.08),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(255,193,7,0.06),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(18,18,18,0.5))]" />
+      <div className="relative">
+        <Header />
+        {renderPage()}
+        <Footer />
+      </div>
     </div>
   );
 };
